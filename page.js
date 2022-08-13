@@ -2,12 +2,17 @@ const eventHead = document.querySelector("#headerId");
 const eventButton = document.querySelector("#buttonId");
 const eventPage = document.querySelector("html");
 
-function changeFunc() {
+const rgbValues = () => {
   const r = Math.floor(Math.random() * 255);
   const g = Math.floor(Math.random() * 255);
   const b = Math.floor(Math.random() * 255);
-  eventHead.innerText = `rgb(${r},${g},${b})`;
-  eventPage.style.backgroundColor = `rgb(${r},${g},${b})`;
+  return `rgb(${r},${g},${b})`;
+};
+
+function changeFunc() {
+  const valuesColor = rgbValues();
+  eventHead.innerText = valuesColor;
+  eventPage.style.backgroundColor = valuesColor;
 }
 
 eventButton.addEventListener("click", changeFunc);
