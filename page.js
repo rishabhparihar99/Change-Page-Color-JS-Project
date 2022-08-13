@@ -9,10 +9,8 @@ const rgbValues = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-function changeFunc() {
+eventButton.addEventListener("click", () => {
   const valuesColor = rgbValues();
   eventHead.innerText = valuesColor;
   eventPage.style.backgroundColor = valuesColor;
-}
-
-eventButton.addEventListener("click", changeFunc);
+});
